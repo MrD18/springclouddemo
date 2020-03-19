@@ -1,0 +1,12 @@
+在feign-hystrix-order80 端配置了服务降级处理,
+@DefaultProperties(defaultFallback = "payment_Global_FallbackMethod")在controller上  为全局降级
+
+编写PaymentFallbackService 实现了PaymentHystrixService 重写了里面的方法,
+@FeignClient(value ="CLOUD-PROVIDER-HYSTRIX-PAYMENT",
+        fallback = PaymentFallbackService.class)
+并在里面的方法中进行了降级处理,如果Feign调用服务的提供方 出现问题,就会回滚到这些方法中
+
+关于服务降级/ 服务熔断
+降级: 服务出现问题(运行异常,超时等)  给你返回不能用了信息,有个兜底的方法
+熔断: 像是保险丝,坏了,还有自我修复的功能, 当检测到该节点服务调用相应正常后,恢复调用链路
+当失败调用达到一定的阈值, 5秒20次调用失败  就会启用熔断机制
