@@ -1,0 +1,14 @@
+8801 8802 8803 都是与rabbitmq相关的服务:
+这几个服务都是SpringCloud Stream 消息驱动相关
+这个东西解决与RabbitMQ,Kafka等相关的一些操作
+我们不用直接操作RabbitMQ 相关的代码,直接操作Stream 提供的一些对象
+消息生产者:  Source  Channel Binder
+消息消费者:   Sink   Channel  Binder
+
+常用的注解:
+@input  标识输入通道, 通过该输入通道接受消息进入程序  接受消息
+@Output   输出通道, 发布消息通过该通道离开程序
+@StreamListener 监听队列,用于消费者的队列消息接受
+@EnableBinding  指信道channel和Exchange 绑定在一起
+
+对比消息输出放与接受方yml文件的区别,注解的使用
