@@ -1,0 +1,25 @@
+consumer-order80 是基于RestTemplate 调用的8001
+  /**
+     * 使用RestTemplate访问restful 接口时:
+     * (url,requestMap,ResponseBean.class) 这三个参数分别代表
+     * REST请求地址,请求参数,Http 响应转换被转换的对象类型
+     */
+
+
+ 最后在此服务和8001 添加了链路追踪技术,目的是看各个服务是如何被调用的
+
+    <!--包含了sleuth+zipkin 链路监控-->
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-zipkin</artifactId>
+    </dependency>
+-------------------------------------------------------------------
+spring:
+  application:
+    name: cloud-order-service
+  zipkin:
+    base-url: http://localhost:9411   # 和8001 一样,看监控的位置
+  sleuth:
+    sampler:
+      probability: 1   #全部采集
+

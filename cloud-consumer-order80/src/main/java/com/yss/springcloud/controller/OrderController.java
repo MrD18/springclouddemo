@@ -68,5 +68,13 @@ public  String getPaymentLB(){
     return restTemplate.getForObject(uri+"/payment/lb",String.class);
 }
 
+    // ====================> zipkin+sleuth  链路监控测试  80调用8001
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin()
+    {
+        String result = restTemplate.getForObject("http://localhost:8001"+"/payment/zipkin/", String.class);
+        return result;
+    }
+
 
 }
