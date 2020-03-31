@@ -1,0 +1,4 @@
+spring:
+  profiles:
+#    active: dev   #更换同一个public 同一个group下的 配置文件,只需在在这里更改就行
+    active: test

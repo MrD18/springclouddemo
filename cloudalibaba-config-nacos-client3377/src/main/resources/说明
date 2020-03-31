@@ -1,0 +1,11 @@
+1.2个配置文件:
+关注两个配置文件的配置内容结合云端的内容:
+对应着两个yml文件看
+${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+nacos-config-client-dev.yaml
+2. Controller上的注解:
+ @RefreshScope // 实现配置自动刷新 和springcloud bus 之前一样
+
+ 测试情况,可以直接拉取到配置文件,最重要的一点,更改了配置文件,不用向之前的还得整合rabbitmq 进行发送消息,
+ 直接改,刷新 直接出结果--方便!自带动态刷新功能
+
