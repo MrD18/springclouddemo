@@ -56,6 +56,13 @@
     <favorite-branches>
       <branch-storage>
         <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="test" />
+              </list>
+            </value>
+          </entry>
           <entry type="REMOTE">
             <value>
               <list>
@@ -391,7 +398,7 @@
       <workItem from="1585198921621" duration="144000" />
       <workItem from="1585227342664" duration="2234000" />
       <workItem from="1585278449848" duration="3083000" />
-      <workItem from="1585623649028" duration="6482000" />
+      <workItem from="1585623649028" duration="8051000" />
     </task>
     <task id="LOCAL-00001" summary="增加说明">
       <created>1584620757937</created>
@@ -470,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585642901726</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="测试3 被修改了">
+      <created>1585643565505</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585643565505</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +544,8 @@
     <MESSAGE value="测试2" />
     <MESSAGE value="测试3" />
     <MESSAGE value="测试3 修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试3 修改" />
+    <MESSAGE value="测试3 被修改了" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试3 被修改了" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="7" key="#Inspections" timestamp="1585018327362">
@@ -557,10 +572,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="815" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1585018522255" />
-    <state x="145" y="0" key="CommitChangelistDialog2" timestamp="1585642900531">
+    <state x="145" y="0" key="CommitChangelistDialog2" timestamp="1585643564212">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="145" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1585642900531" />
+    <state x="145" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1585643564212" />
     <state x="121" y="57" key="DiffContextDialog" timestamp="1584626787117">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -621,14 +636,14 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="-9" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1585029640815" />
-    <state x="455" y="131" key="Vcs.Push.Dialog.v2" timestamp="1585643476954">
+    <state x="455" y="131" key="Vcs.Push.Dialog.v2" timestamp="1585644382916">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="455" y="131" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1585643476954" />
-    <state x="335" y="147" key="git4idea.merge.GitPullDialog" timestamp="1585642941896">
+    <state x="455" y="131" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1585644382916" />
+    <state x="335" y="147" key="git4idea.merge.GitPullDialog" timestamp="1585644813565">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="335" y="147" key="git4idea.merge.GitPullDialog/0.0.1280.689@0.0.1280.689" timestamp="1585642941896" />
+    <state x="335" y="147" key="git4idea.merge.GitPullDialog/0.0.1280.689@0.0.1280.689" timestamp="1585644813565" />
     <state x="441" y="251" key="git4idea.ui.GitResetDialog" timestamp="1584964101640">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
