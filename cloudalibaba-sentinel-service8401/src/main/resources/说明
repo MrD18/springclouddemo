@@ -1,0 +1,28 @@
+此服务为测试Alibaba-sentinel 熔断 限流 降级等功能
+1.sentinel  相当于Hystrix,但有比其高级, 单独的一个组件,可以独立出来
+2.直接界面化配置
+3.是将8401这个服务,注册进nacos8848,并通过sentinel 8080 进行监控
+4.nacos(单独的项目,不同我们想Eruka那样,还得自己建立一个服务) 和 sentinel 都是独立的服务(Alibaba 自主的服务,集成springboot)
+-----------------------------------------------------------------------------
+server:
+  port: 8401 # 这个服务的端口号
+
+spring:
+  application:
+    name: cloudalibaba-sentinel-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848   # 注册进nacos中
+    sentinel:
+      transport:
+        dashboard: localhost:8080     # 被sentinel 8080 所监控
+        port: 8719  #默认8719，假如被占用了会自动从8719开始依次+1扫描。直至找到未被占用的端口
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+-----------------------------------------------------------------------------------
+具体参考笔记里面:   流控规则   降级规则    热点规则
