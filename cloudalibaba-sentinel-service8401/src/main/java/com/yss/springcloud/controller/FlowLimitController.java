@@ -1,4 +1,4 @@
-package com.yss.springcloud;
+package com.yss.springcloud.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
