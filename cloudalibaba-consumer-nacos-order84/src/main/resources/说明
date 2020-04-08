@@ -1,0 +1,23 @@
+服务熔断功能
+Ribbon系列:
+采用:  nacos+sentinel; ribbon+restTemplate
+      9003+9004 服务的提供者 -注册进nacos  sentinel监控
+      84 服务的消费者-注册进nacos  sentinel监控
+
+着重关注:熔断的一些配置 CircleBreakerController 里面的熔断配置
+/**关于方法降级的一些配置:
+ * 没有任何配置: 给客户error页面,不友好
+ * 只配置fallback:只负责业务异常
+ * 只配blockHandler:只负责sentinel控制台配置违规
+ * 2个都配:如果不超过Sentinel的配置范围,正常访问,超过就会进入blockHandler
+ *        如果不超过Sentinel的配置范围,是异常的访问,就会fallback 业务异常, 超过就会进入blockHandler,由Sentinel负责
+ *exceptionsToIgnore:忽略某些异常,出现该异常的话直接抛出页面,不进行降级作用
+ **/
+-------------------------------------------------------------
+在用openFeign 进行调用
+
+openFeign使用还是很简单
+yml中开启feign---service中加注解@FeignClient(服务的名,回滚类)---写实现类(回滚的方法)
+ controller 调用service
+
+ 关闭9003/9004   然后83调用时 发现宕机-然后回滚
